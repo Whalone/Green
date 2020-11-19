@@ -1,0 +1,13 @@
+/**index.wxss**/
+
+/* 进度条颜色 */
+.cu-progress{
+  background-color: #8799a3;
+  margin-left: 20rpx;
+  height: 5rpx;
+}
+
+/* 等级提示 */
+.lvInfo{
+  margin-left: 20rpx;
+}
