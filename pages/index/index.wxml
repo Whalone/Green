@@ -51,10 +51,8 @@
       </view>
     </view>
 
-    <view class="flex-sub margin-xs radius">
-
-    </view>
-
+    <view class="flex-sub margin-xs radius"></view>
 
   </view>
 </view>
+
