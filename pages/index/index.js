@@ -15,7 +15,16 @@ Page({
       url: '../logs/logs'
     })
   },
+  tabBar() {
+    console.log("000000");
+    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 0
+      })
+    }
+},
   onLoad: function () {
+    
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -43,6 +52,11 @@ Page({
       })
     }
   },
+
+  onShow: function () {
+    this.tabBar();
+  },
+  
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo

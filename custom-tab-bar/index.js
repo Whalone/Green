@@ -31,16 +31,18 @@ Component({
       let key = Number(e.currentTarget.dataset.index);
       let tabList = this.data.tabList;
       let selected= this.data.selected;
-      console.log(key);
-      console.log(tabList);
-      console.log(selected);
+      console.log("click:"+key);
+      //console.log(tabList);
+      console.log("selected:"+selected);
       if(selected !== key){
         this.setData({
           selected:key
         });
+        console.log("now selected:"+this.data.selected);
         wx.switchTab({
           url: `/${tabList[key].pagePath}`,
         })
+        console.log("now selected:"+this.data.selected);
       }
     },
   }

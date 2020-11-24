@@ -1,0 +1,20 @@
+<!--pages/auth/auth.wxml-->
+<view class="container">
+  <image class="userinfo-avatar" src="/static/img/logo.png" mode="cover"></image>
+  <view class="title text-xl padding">
+    <text class="text-black text-bold">Green Bike</text>
+  </view>
+  <!-- <view class="padding flex flex-wrap justify-between align-center">
+    <button class="cu-btn round lg">我是学生</button>
+  </view> -->
+  <view class="padding flex flex-direction">
+    <button class="cu-btn bg-green2 round lg" bindtap="jumpStudent">我是学生</button>
+  </view>
+  <view class="padding flex flex-direction">
+    <button class="cu-btn bg-green2 round lg" bindtap="jumpLogin">我是管理</button>
+  </view>
+
+  <view class="mini text-center text-xs padding" style="">
+    <text class="text-gray">北京理工大学珠海学院</text>
+</view>
+</view>

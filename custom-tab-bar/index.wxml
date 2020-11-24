@@ -8,12 +8,12 @@
         分类
     </view>
     <view class="action text-gray add-action">
-      <button class="cu-btn cuIcon-add bg-green shadow"></button>
-      发布
+      <button class="cuIcon-scan text-gray shadow"></button>
+      扫码
     </view>
     <view class="action {{selected === 2 ? 'active' : 'default'}}" data-index="2" bindtap="switchTab">
       <view class="cuIcon-cart">
-        <view class="cu-tag badge">99</view>
+        <!-- <view class="cu-tag badge">99</view> -->
       </view>
       购物车
     </view>

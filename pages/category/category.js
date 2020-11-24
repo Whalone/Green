@@ -8,7 +8,9 @@ Page({
 
   },
   tabBar() {
+    console.log("111111");
     if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+      console.log("111");
       this.getTabBar().setData({
         selected: 1
       })
@@ -19,7 +21,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.tabBar();
   },
 
   /**
@@ -33,7 +35,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.tabBar();
   },
 
   /**
