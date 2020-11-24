@@ -1,5 +1,8 @@
 /**index.wxss**/
-
+page{
+  height: 100%;
+  background-color: white;
+}
 /* 进度条颜色 */
 .cu-progress{
   background-color: #8799a3;
@@ -22,4 +25,15 @@
   height: 128rpx;
   border-radius: 50%;
   overflow: hidden;
+}
+
+
+
+.cu-item{
+  padding-top: 30rpx !important;
+  padding-bottom: 40rpx !important;
+}
+
+.cu-item text{
+  font-weight: 600;
 }

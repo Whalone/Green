@@ -50,9 +50,33 @@
         </view>
       </view>
     </view>
-
     <view class="flex-sub margin-xs radius"></view>
+  </view>
 
+  <view class="cu-list grid col-2 no-border">
+    <view class="cu-item">
+      <view class="cuIcon-explorefill text-blue icon" style="font-size:60rpx;">
+        <text>借用情况</text>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="cuIcon-repairfill text-yellow icon" style="font-size:60rpx;">
+        <text>故障报修</text>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="cuIcon-warnfill text-red icon" style="font-size:60rpx;">
+        <text>归还异常</text>
+      </view>
+    </view>
+
+    <view class="cu-item">
+      <view class="cuIcon-servicefill text-olive icon" style="font-size:60rpx;">
+        <text>联系管理</text>
+      </view>
+    </view>
   </view>
 </view>
 

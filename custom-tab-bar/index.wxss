@@ -6,5 +6,5 @@
   color: #39b54a;
 }
 .default{
-  color: #fff;
+  color: black;
 }
