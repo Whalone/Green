@@ -61,7 +61,7 @@
     </view>
 
     <view class="cu-item">
-      <view class="cuIcon-repairfill text-yellow icon" style="font-size:60rpx;">
+      <view class="cuIcon-repairfill text-yellow icon" style="font-size:60rpx;" bindtap="jumpException">
         <text>故障报修</text>
       </view>
     </view>

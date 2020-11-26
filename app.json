@@ -3,15 +3,19 @@
     "pages/auth/auth",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/category/category",
-    "pages/cart/cart",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/exception/exception"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#1cbbb4",
     "navigationBarTitleText": "小绿单车",
     "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+    "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   },
   "tabBar": {
     "custom": true,

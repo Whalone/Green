@@ -9,6 +9,11 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+  jumpException: function () {
+    wx.navigateTo({
+      url: '../exception/exception'
+    })
+  },
   //事件处理函数
   bindViewTap: function () {
     wx.navigateTo({
@@ -22,9 +27,9 @@ Page({
         selected: 0
       })
     }
-},
+  },
   onLoad: function () {
-    
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -56,7 +61,7 @@ Page({
   onShow: function () {
     this.tabBar();
   },
-  
+
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
