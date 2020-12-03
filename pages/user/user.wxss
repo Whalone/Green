@@ -1,1 +1,40 @@
 /* pages/user/user.wxss */
+/**index.wxss**/
+page{
+  height: 100%;
+  background-color: white;
+}
+/* 进度条颜色 */
+.cu-progress{
+  background-color: #8799a3;
+  margin-left: 20rpx;
+  height: 5rpx;
+}
+
+/* 等级提示 */
+.lvInfo{
+  margin-left: 20rpx;
+}
+
+.user {
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+}
+.user-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+
+
+.cu-item{
+  padding-top: 30rpx !important;
+  padding-bottom: 40rpx !important;
+}
+
+.cu-item text{
+  font-weight: 600;
+}

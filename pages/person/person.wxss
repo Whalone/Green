@@ -1,0 +1,9 @@
+/* pages/person/person.wxss */
+
+.cuIcon-male{
+  font-size: 40rpx !important;
+}
+
+.cuIcon-female{
+  font-size: 40rpx !important;
+}

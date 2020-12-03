@@ -1,0 +1,50 @@
+<!--pages/report/report.wxml-->
+<form>
+  <view class="cu-form-group">
+    <view class="title">单车ID</view>
+    <input placeholder="请输入单车ID"></input>
+  </view>
+  <view class="cu-form-group">
+		<view class="title">位置</view>
+		<input placeholder="点击图标进行定位" value="{{address}}"></input>
+		<text class="cuIcon-locationfill text-orange" bindtap="getLocation"></text>
+  </view>
+  <view class="cu-form-group">
+		<view class="title">故障选择</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker">
+				{{index?picker[index]:'点击选择故障类型'}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group align-start">
+    <view class="title"><text>故障描述\n(选填)</text></view>
+    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput" placeholder="点击输入故障描述"></textarea>
+  </view>
+
+  <view class="cu-bar bg-white margin-top">
+		<view class="action">
+			图片上传
+		</view>
+		<view class="action">
+			{{imgList.length}}/4
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+</form>
+
+<view class="padding flex flex-direction">
+  <button class="cu-btn bg-blue lg button-hover" style="margin-left:0;margin-right:0;width:100%;">提交</button>
+</view>

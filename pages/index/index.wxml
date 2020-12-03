@@ -61,19 +61,19 @@
     </view>
 
     <view class="cu-item">
-      <view class="cuIcon-repairfill text-yellow icon" style="font-size:60rpx;" bindtap="jumpException">
+      <view class="cuIcon-repairfill text-yellow icon" style="font-size:60rpx;" bindtap="jumpReport">
         <text>故障报修</text>
       </view>
     </view>
 
     <view class="cu-item">
-      <view class="cuIcon-warnfill text-red icon" style="font-size:60rpx;">
+      <view class="cuIcon-warnfill text-red icon" style="font-size:60rpx;" bindtap="jumpException">
         <text>归还异常</text>
       </view>
     </view>
 
     <view class="cu-item">
-      <view class="cuIcon-servicefill text-olive icon" style="font-size:60rpx;">
+      <view class="cuIcon-servicefill text-olive icon" style="font-size:60rpx;" bindtap="callAdmin">
         <text>联系管理</text>
       </view>
     </view>

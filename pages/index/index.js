@@ -9,11 +9,25 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+
+  callAdmin:function(){
+    wx.makePhoneCall({
+      phoneNumber: '18807669295' //仅为示例，并非真实的电话号码
+    })
+  },
+
   jumpException: function () {
     wx.navigateTo({
       url: '../exception/exception'
     })
   },
+
+  jumpReport: function () {
+    wx.navigateTo({
+      url: '../report/report'
+    })
+  },
+
   //事件处理函数
   bindViewTap: function () {
     wx.navigateTo({

@@ -1,14 +1,14 @@
-// pages/exception/exception.js
+// pages/report/report.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    address:"",
     imgList: [],
-    
+    picker: ['车把', '车轮', '座椅','车链','脚踏板','刹车','其他'],
   },
+
   getLocation() {
     wx.chooseLocation({
       success: (res)=>{
@@ -19,6 +19,14 @@ Page({
     })
 
   },
+
+  PickerChange(e) {
+    console.log(e);
+    this.setData({
+      index: e.detail.value
+    })
+  },
+
   ChooseImage() {
     wx.chooseImage({
       count: 4, //默认9
@@ -59,6 +67,7 @@ Page({
       }
     })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */

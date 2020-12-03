@@ -4,7 +4,10 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/user/user",
-    "pages/exception/exception"
+    "pages/exception/exception",
+    "pages/report/report",
+    "pages/person/person",
+    "pages/record/record"
   ],
   "window": {
     "backgroundTextStyle": "light",

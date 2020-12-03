@@ -63,6 +63,18 @@
         {
           "name": "pages/exception/exception",
           "pathName": "pages/exception/exception",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/report/report",
+          "pathName": "pages/report/report",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/person/person",
+          "pathName": "pages/person/person",
           "scene": null
         }
       ]

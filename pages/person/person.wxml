@@ -1,0 +1,43 @@
+<!--pages/person/person.wxml-->
+<form>
+  <view class="cu-form-group">
+    <view class="title">头像</view>
+    <view class="cu-avatar radius">
+      <open-data type='userAvatarUrl'></open-data>
+    </view>
+  </view>
+
+
+  <view class="cu-form-group">
+    <view class="title">昵称</view>
+    <open-data type='userNickName'></open-data>
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">性别</view>
+    <view class="cuIcon-male lg text-blue"></view>
+    <!-- <view class="cuIcon-female lg text-pink"></view> -->
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">手机号码</view>
+    <view>13100000000</view>
+    <!-- <view class="cuIcon-female lg text-pink"></view> -->
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">学院</view>
+    <view>信息管理学院</view>
+  </view>
+
+  <view class="cu-form-group margin-top">
+    <view class="title">剩余金额</view>
+    <view>5.20</view>
+  </view>
+
+  <view class="cu-form-group" bindtap="jumpRecord">
+    <view class="title">使用记录</view>
+    <view class="cuIcon-right lg"></view>
+  </view>
+
+</form>

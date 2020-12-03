@@ -2,6 +2,6 @@
   "usingComponents": {},
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#1cbbb4",
-  "navigationBarTitleText": "归还异常",
+  "navigationBarTitleText": "故障报修",
   "navigationBarTextStyle": "white"
 }
