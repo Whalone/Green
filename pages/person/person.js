@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    sex:"male",
+    phone:13100000000,
+    college:"信息管理学院",
+    money:5.20
   },
   jumpRecord:function(){
     wx.navigateTo({

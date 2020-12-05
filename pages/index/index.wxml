@@ -11,7 +11,7 @@
     <text class="user-motto">{{motto}}</text>
   </view> -->
 <view class="bg-white">
-  <view class="flex solid-bottom padding align-start bg-cyan">
+  <view class="flex solid-bottom padding align-start bg-cyan" style="border-bottom-right-radius:2em;">
     <!-- 头像部分 -->
     <view class="flex-sub margin-xs radius">
       <!-- <view class="xl cu-avatar round" style="background-image:url({{userInfo.avatarUrl}});"></view> -->

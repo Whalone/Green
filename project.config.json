@@ -61,8 +61,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/exception/exception",
-          "pathName": "pages/exception/exception",
+          "name": "pages/record/record",
+          "pathName": "pages/record/record",
           "query": "",
           "scene": null
         },
@@ -75,6 +75,7 @@
         {
           "name": "pages/person/person",
           "pathName": "pages/person/person",
+          "query": "",
           "scene": null
         }
       ]

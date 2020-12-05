@@ -7,6 +7,19 @@ Page({
   data: {
 
   },
+
+  jumpPerson:function(){
+    wx.navigateTo({
+      url: '../person/person',
+    })
+  },
+
+  jumpReport:function(){
+    wx.navigateTo({
+      url: '../record/record',
+    })
+  },
+
   tabBar() {
     if (typeof this.getTabBar === 'function' && this.getTabBar()) {
       this.getTabBar().setData({

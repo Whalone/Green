@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#1cbbb4",
+  "navigationBarTitleText": "借用情况",
+  "navigationBarTextStyle": "white"
 }

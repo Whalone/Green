@@ -1,1 +1,17 @@
 /* pages/record/record.wxss */
+
+.record{
+  background-color: white;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 20rpx;
+  padding-bottom: 30rpx;
+}
+
+.bike{
+  padding: 30rpx 30rpx 30rpx 30rpx;
+}
+
+.row{
+  padding: 5rpx 30rpx 5rpx 30rpx;
+}
