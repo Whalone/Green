@@ -1,0 +1,14 @@
+<!--pages/suggest/suggest.wxml-->
+<view class="margin-top">
+  <form>
+    <view class="cu-form-group align-start">
+      <view class="title"><text>意见描述</text></view>
+      <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput"
+        placeholder="点击输入意见描述"></textarea>
+    </view>
+  </form>
+
+  <view class="padding flex flex-direction">
+    <button class="cu-btn bg-blue lg button-hover" style="margin-left:0;margin-right:0;width:100%;">提交</button>
+  </view>
+</view>

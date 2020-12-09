@@ -1,17 +1,25 @@
 /* pages/record/record.wxss */
 
-.record{
+.record {
   background-color: white;
   margin-left: 20rpx;
   margin-right: 20rpx;
   border-radius: 20rpx;
-  padding-bottom: 30rpx;
+  padding-bottom: 0rpx;
 }
 
-.bike{
+.bike {
   padding: 30rpx 30rpx 30rpx 30rpx;
 }
 
-.row{
-  padding: 5rpx 30rpx 5rpx 30rpx;
+.row {
+  padding: 0rpx 30rpx 20rpx 30rpx;
+  display: flex;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25rpx !important;
 }

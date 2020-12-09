@@ -1,4 +1,4 @@
-// pages/user/user.js
+// pages/suggest/suggest.js
 Page({
 
   /**
@@ -6,32 +6,6 @@ Page({
    */
   data: {
 
-  },
-
-  jumpPerson:function(){
-    wx.navigateTo({
-      url: '../person/person',
-    })
-  },
-
-  jumpReport:function(){
-    wx.navigateTo({
-      url: '../record/record',
-    })
-  },
-
-  jumpSuggest:function(){
-    wx.navigateTo({
-      url: '../suggest/suggest',
-    })
-  },
-
-  tabBar() {
-    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-      this.getTabBar().setData({
-        selected:1
-      })
-    }
   },
 
   /**
@@ -52,7 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.tabBar();
+
   },
 
   /**

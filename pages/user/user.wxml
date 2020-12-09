@@ -68,7 +68,7 @@
     </view>
 
     <view class="cu-item">
-      <view class="cuIcon-formfill text-green icon" style="font-size:60rpx;" bindtap="jumpException">
+      <view class="cuIcon-formfill text-green icon" style="font-size:60rpx;" bindtap="jumpSuggest">
         <text>意见反馈</text>
       </view>
     </view>

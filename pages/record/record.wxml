@@ -2,8 +2,48 @@
 
 <view class="record margin-top">
   <view class="bike">单车</view>
-  <view class="row">2020-10-11 14:56:20</view>
-  <view class="row">第三饭堂</view>
-  <view class="row">第三饭堂</view>
-  <view class="row">第三饭堂</view>
+  <view class="row">
+    <view class="cuIcon-timefill lg text-black icon"> </view>
+    <view class="margin-left"> 2020-10-11 14:56:20</view>
+  </view>
+  <view class="row">
+    <view class="cuIcon-locationfill lg text-green icon"> </view>
+    <view class="margin-left"> 第三饭堂</view>
+  </view>
+  <view class="row">
+    <view class="cuIcon-locationfill lg text-orange icon"> </view>
+    <view class="margin-left"> 第三饭堂</view>
+  </view>
+</view>
+
+<view class="record margin-top">
+  <view class="bike">单车</view>
+  <view class="row">
+    <view class="cuIcon-timefill lg text-black icon"> </view>
+    <view class="margin-left"> 2020-10-11 14:56:20</view>
+  </view>
+  <view class="row">
+    <view class="cuIcon-locationfill lg text-green icon"> </view>
+    <view class="margin-left"> 第三饭堂</view>
+  </view>
+  <view class="row">
+    <view class="cuIcon-locationfill lg text-orange icon"> </view>
+    <view class="margin-left"> 第三饭堂</view>
+  </view>
+</view>
+
+<view class="record margin-top">
+  <view class="bike">单车</view>
+  <view class="row">
+    <view class="cuIcon-timefill lg text-black icon"> </view>
+    <view class="margin-left"> 2020-10-11 14:56:20</view>
+  </view>
+  <view class="row">
+    <view class="cuIcon-locationfill lg text-green icon"> </view>
+    <view class="margin-left"> 第三饭堂</view>
+  </view>
+  <view class="row">
+    <view class="cuIcon-locationfill lg text-orange icon"> </view>
+    <view class="margin-left"> 第三饭堂</view>
+  </view>
 </view>
