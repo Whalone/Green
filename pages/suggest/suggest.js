@@ -1,11 +1,41 @@
 // pages/suggest/suggest.js
+var util = require('../../utils/util')
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    isLoading:false, 
+    suggestion:''
+  },
+  submit(){
+    this.setData({
+      isLoading:true
+    })
+    var data = {
+      suggestion:this.data.suggestion
+    }
 
+    util.request('/suggestion',data,'POST',(res)=>{
+      this.setData({
+        isLoading:false
+      })
+
+      wx.showToast({
+        title: '提交成功',
+        icon: 'success',
+        duration: 2000
+      })
+    })
+  },
+
+  // 双向绑定获取textArea的值
+  textareaInput(e){
+    this.setData({
+      suggestion:e.detail.value
+    })
   },
 
   /**

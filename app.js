@@ -1,6 +1,10 @@
 //app.js
+var util = require('./utils/util')
+
 App({
+  
   onLaunch: function () {
+    let that = this;
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -10,6 +14,23 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        wx.request({
+          url: util.server_url+'/openId',
+          method: 'GET',
+          data: {
+            code:res.code,
+            app_id:util.app_id,
+          },
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success(res) {
+            var res = res.data;
+            that.globalData.openId = res.data.openId
+            that.globalData.unionId = res.data.unionId
+            console.log(that.globalData.openId)
+          }
+        })
       }
     })
     // 获取用户信息
@@ -38,13 +59,15 @@ App({
       success: e => {
         this.globalData.StatusBar = e.statusBarHeight;
         let custom = wx.getMenuButtonBoundingClientRect();
-        this.globalData.Custom = custom;  
+        this.globalData.Custom = custom;
         this.globalData.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
       }
     })
 
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    openId:'',
+    unionId:''
   }
 })

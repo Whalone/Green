@@ -1,25 +1,14 @@
 // pages/record/record.js
+var util = require('../../utils/util')
+var app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    records:[
-      {
-        begin_addr:'北京理工大学珠海学院第三饭堂',
-        end_addr:'北京理工大学珠海学院34栋宿舍',
-        date:'2020-10-14',
-        余额:'5.2'
-      },
-      {
-        begin_addr:'北京理工大学珠海学院第四饭堂',
-        end_addr:'北京理工大学珠海学院16栋宿舍',
-        date:'2020-10-14',
-        余额:'6.2'
-      }
-    ]
-
+    records:[],
   },
 
   /**
@@ -40,7 +29,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var openId = app.globalData.openId
+    var url = "/records/"+openId
 
+    util.request(url,'','GET',(res)=>{
+      this.setData({
+        records:res.data
+      })
+
+      
+
+    });
+    
   },
 
   /**

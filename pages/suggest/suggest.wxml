@@ -3,12 +3,12 @@
   <form>
     <view class="cu-form-group align-start">
       <view class="title"><text>意见描述</text></view>
-      <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput"
+      <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaInput"
         placeholder="点击输入意见描述"></textarea>
     </view>
   </form>
 
   <view class="padding flex flex-direction">
-    <button class="cu-btn bg-blue lg button-hover" style="margin-left:0;margin-right:0;width:100%;">提交</button>
+    <button class="cu-btn bg-blue lg button-hover" style="margin-left:0;margin-right:0;width:100%;" bindtap="submit"><view class="cu-load load-icon {{isLoading?'loading':''}}" ></view>提交</button>
   </view>
 </view>
