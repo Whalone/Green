@@ -6,4 +6,5 @@
 
 .cuIcon-female{
   font-size: 40rpx !important;
+  color: #e03997 !important;
 }

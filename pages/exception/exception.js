@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    id:"",
     address:"",
     imgList: [],
     
@@ -59,6 +60,14 @@ Page({
       }
     })
   },
+
+  // 双向绑定获取textArea的值
+  textareaInput(e){
+    this.setData({
+      suggestion:e.detail.value
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

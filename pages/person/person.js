@@ -1,14 +1,16 @@
 // pages/person/person.js
+var util = require('../../utils/util')
+var app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    sex:"male",
-    phone:13100000000,
-    college:"信息管理学院",
-    money:5.20
+
+    person:{},
+
   },
   jumpRecord:function(){
     wx.navigateTo({
@@ -20,6 +22,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var openId = app.globalData.openId;
+    var url = "/user/"+openId;
+    console.log(url)
+
+    wx.showLoading({
+      title: '加载中',
+    })
+
+    util.request(url,'','GET',(res)=>{
+      this.setData({
+        person:res.data
+      })
+
+      console.log(this.data.person)
+      
+      wx.hideLoading();
+    })
 
   },
 

@@ -2,16 +2,16 @@
 <form>
   <view class="cu-form-group">
     <view class="title">单车ID</view>
-    <input placeholder="请输入单车ID"></input>
+    <input placeholder="请输入单车ID" bindinput="idInput"></input>
   </view>
   <view class="cu-form-group">
 		<view class="title">位置</view>
-		<input placeholder="点击图标进行定位" value="{{address}}"></input>
+		<input placeholder="点击图标进行定位" value="{{address}}" bindinput="addressInput"></input>
 		<text class="cuIcon-locationfill text-orange" bindtap="getLocation"></text>
 	</view>
   <view class="cu-form-group align-start">
     <view class="title"><text>故障描述\n(选填)</text></view>
-    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaBInput" placeholder="点击输入故障描述"></textarea>
+    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaInput" placeholder="点击输入故障描述"></textarea>
   </view>
 
   <view class="cu-bar bg-white margin-top">
