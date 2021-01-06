@@ -1,10 +1,14 @@
+const util = require("../utils/util");
+
 // custom-tab-bar/index.js
 Component({
   properties: {},
   data: {
-        //当前高亮项
+    //当前高亮项
     selected: 0,
-        //tabBar页面数据
+    // 单车ID
+    bikeId:"",
+    //tabBar页面数据
     tabList: [
           {
             "pagePath": "pages/index/index",
@@ -39,5 +43,53 @@ Component({
         console.log("now selected:"+this.data.selected);
       }
     },
+    scanBike(){
+      var that = this;
+      wx.scanCode({
+        success (res) {
+          that.setData({
+            bikeId:res.result
+          })
+
+          that.updateBikeStatus("open")
+        }
+      })
+
+    },
+
+    updateBikeStatus(mode){
+      var bikeId  = this.data.bikeId;
+      var url = '/bike/'+bikeId;
+
+      var data = {
+        mode:mode
+      }
+
+      util.request(url,data,'PUT',(res)=>{
+
+        wx.showLoading({
+          title: '开锁中',
+        })
+
+        if(res.status = 'success'){
+
+          wx.hideLoading({
+            success: (res) => {
+              wx.showToast({
+                title: '开锁成功',
+              })
+            },
+          })
+
+        }else{
+          wx.showToast({
+            title: '出现异常，请联系管理员',
+          })
+        }
+      })
+    }
+
+
+
   }
 })

@@ -4,7 +4,7 @@
         首页
     </view>
     <view class="action text-gray add-action">
-      <button class="cuIcon-scan text-gray shadow"></button>
+      <button class="cuIcon-scan text-gray shadow" bindtap="scanBike"></button>
       扫码
     </view>
     <view class="action {{selected === 1 ? 'active' : 'default'}}" data-index="1" bindtap="switchTab">

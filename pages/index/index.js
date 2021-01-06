@@ -28,6 +28,12 @@ Page({
     })
   },
 
+  goback:function(){
+    wx.redirectTo({
+      url: '../auth/auth',
+    })
+  },
+
   //事件处理函数
   bindViewTap: function () {
     wx.navigateTo({

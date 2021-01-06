@@ -8,7 +8,7 @@ Page({
 
   },
   jumpStudent(){
-    wx.switchTab({
+    wx.reLaunch({
       url: '/pages/index/index',
     })
   },

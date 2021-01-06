@@ -77,6 +77,12 @@
         <text>联系管理</text>
       </view>
     </view>
+
+    <view class="cu-item">
+      <view class="cuIcon-backwardfill text-brown icon" style="font-size:60rpx;" bindtap="goback">
+        <text>返回</text>
+      </view>
+    </view>
   </view>
 </view>
 
