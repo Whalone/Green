@@ -1,0 +1,45 @@
+/* pages/login/login.wxss */
+
+page {
+  background-color: rgb(243, 255, 241);
+}
+
+.container {
+  padding: 100rpx 0;
+
+  height: 100%;
+}
+
+.title {
+  letter-spacing: 10rpx;
+}
+
+.bg-green2 {
+  background-color: rgb(159, 222, 131);
+  color: white;
+}
+
+.mini{
+  position:fixed; 
+  bottom:0;
+  /* margin-top: 250rpx; */
+}
+
+input{
+  background: transparent;
+  border-bottom: 1px solid;
+  border-bottom-color: #8799a3;
+}
+
+.cu-form-group{
+  background-color: transparent;
+}
+
+.icon{
+  font-size: 50rpx !important;
+  margin-right: 20rpx;
+}
+
+.cu-form-group+.cu-form-group{
+  border-top: none;
+}

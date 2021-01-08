@@ -1,4 +1,4 @@
-// pages/auth/auth.js
+// pages/admin/admin.js
 Page({
 
   /**
@@ -7,14 +7,10 @@ Page({
   data: {
 
   },
-  jumpStudent(){
-    wx.reLaunch({
-      url: '/pages/index/index',
-    })
-  },
-  jumpLogin(){
+
+  jumpReport:function(){
     wx.redirectTo({
-      url: '/pages/login/login',
+      url: '/pages/admin_report/admin_report',
     })
   },
 

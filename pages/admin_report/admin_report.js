@@ -1,21 +1,38 @@
-// pages/auth/auth.js
+// pages/admin_report/admin_report.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    notSolve:'',
+    isSolve:'',
+  },
 
-  },
-  jumpStudent(){
-    wx.reLaunch({
-      url: '/pages/index/index',
+  showModal(e) {
+    this.setData({
+      modalName: e.currentTarget.dataset.target
     })
   },
-  jumpLogin(){
-    wx.redirectTo({
-      url: '/pages/login/login',
+  
+  hideModal(e) {
+    this.setData({
+      modalName: null
     })
+  },
+
+  isSolve:function(e){
+    this.setData({
+      isSolve:e.detail.value
+    })
+  },
+
+  // 是否显示没有解决的数据
+  notSolve:function(e) {
+    this.setData({
+      notSolve:e.detail.value,
+    })
+    console.log(this.data.notSolve)
   },
 
   /**

@@ -8,7 +8,10 @@
     "pages/report/report",
     "pages/person/person",
     "pages/record/record",
-    "pages/suggest/suggest"
+    "pages/suggest/suggest",
+    "pages/admin/admin",
+    "pages/admin_report/admin_report",
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",

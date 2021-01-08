@@ -68,6 +68,7 @@ App({
   globalData: {
     userInfo: null,
     openId:'',
-    unionId:''
+    unionId:'',
+    admin_login:true,
   }
 })

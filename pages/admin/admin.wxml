@@ -1,0 +1,79 @@
+<!--pages/admin/admin.wxml-->
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 菜单列表
+  </view>
+</view>
+<!-- 菜单列表的分菜单 -->
+<view class="cu-list menu sm-border">
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-share text-blue"></text>
+      <text class="text-grey">单车借用情况</text>
+    </view>
+  </view>
+  <view class="cu-item arrow" bindtap="jumpReport">
+    <view class="content">
+      <text class="cuIcon-friendfill text-olive"></text>
+      <text class="text-grey">学生故障报修</text>
+    </view>
+    <view class="action">
+      <view class="cu-tag round bg-red sm">5</view>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-warnfill text-yellow"></text>
+      <text class="text-grey">学生异常归还</text>
+    </view>
+  </view>
+</view>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 更多功能
+  </view>
+</view>
+<!-- 更多功能列表的分菜单 -->
+<view class="cu-list menu sm-border">
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-friendadd text-red"></text>
+      <text class="text-grey">管理员个人信息</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-friend text-orange"></text>
+      <text class="text-grey">学生个人信息</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-friendfavor text-green"></text>
+      <text class="text-grey">学生借用情况</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-searchlist text-yellow"></text>
+      <text class="text-grey">意见反馈查看</text>
+    </view>
+  </view>
+</view>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 操作
+  </view>
+</view>
+<!-- 操作的分菜单 -->
+<view class="cu-list menu sm-border">
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-roundclosefill text-red"></text>
+      <text class="text-grey">退出</text>
+    </view>
+  </view>
+
+</view>

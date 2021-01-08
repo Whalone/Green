@@ -1,0 +1,28 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <image class="userinfo-avatar" src="/static/img/logo.png" mode="cover"></image>
+  <view class="title text-xl padding">
+    <text class="text-black text-bold">管理员登录</text>
+  </view>
+  
+  <form>
+    <view class="cu-form-group margin-top">
+      <view class="cuIcon-profile text-black icon"></view>
+		  <input placeholder="请输入账号" bindinput="userNameInput"></input>
+    </view>
+
+    <view class="cu-form-group margin-top">
+      <view class="cuIcon-lock text-black icon"></view>
+		  <input placeholder="请输入密码" type="password" bindinput="passwordInput"></input>
+    </view>
+
+  </form>
+
+  <view class="padding flex flex-direction">
+    <button class="cu-btn bg-green2 round lg" bindtap="adminLogin">登录</button>
+  </view>
+
+  <view class="mini text-center text-xs padding">
+    <text class="text-gray">北京理工大学珠海学院</text>
+  </view>
+</view>

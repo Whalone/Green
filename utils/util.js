@@ -21,7 +21,7 @@ function request(url, data, method,callback) {
     success(res) {
       callback && callback(res.data);
     },
-    fai() {
+    fail() {
       
     }
   })
