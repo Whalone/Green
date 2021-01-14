@@ -69,6 +69,6 @@ App({
     userInfo: null,
     openId:'',
     unionId:'',
-    admin_login:true,
+    admin_login:false,
   }
 })

@@ -1,7 +1,7 @@
 <!--pages/admin_report/admin_report.wxml-->
 <scroll-view scroll-y="{{modalName==null}}" class="page show">
-  
-  <view class="cu-bar bg-white solid-bottom margin-top">
+
+  <view class="cu-bar bg-white solid-bottom">
     <view class="action">
       <text class="cuIcon-title text-orange "></text> 报修列表
     </view>
@@ -12,14 +12,14 @@
 
   <view class="cu-modal {{modalName=='menuModal'?'show':''}}" bindtap="hideModal">
     <view class="cu-dialog" catchtap>
-      <scroll-view scroll-y style="height:300rpx">
+      <scroll-view scroll-y style="height:200rpx">
         <view class="cu-list menu text-left solid-top">
           <view class="cu-item">
             <view class="content">
               <text class="text-grey">未解决</text>
             </view>
             <view class="action">
-              <switch bindchange="notSolve"  checked="true"></switch>
+              <switch bindchange="notSolve" checked="{{notSolve}}"></switch>
             </view>
           </view>
           <view class="cu-item">
@@ -27,132 +27,74 @@
               <text class="text-grey">已解决</text>
             </view>
             <view class="action">
-              <switch bindchange="isSolve"></switch>
+              <switch bindchange="isSolve" checked="{{isSolve}}"></switch>
             </view>
           </view>
         </view>
       </scroll-view>
     </view>
   </view>
+  <view wx:for="{{reportList}}" wx:for-index="idx" wx:for-item="item">
+    <view class="cu-list menu card-menu margin-top"
+      wx:if="{{(item.status == '0'&&notSolve == true)||(item.status == '1'&&isSolve == true)}}">
+      <view class="cu-item">
+        <view class="content">
+          <text class="cuIcon-card text-orange"></text>
+          <text class="text-grey">单车ID</text>
+        </view>
+        <view class="action">
+          <text class="text-grey text-sm">{{item.car_id}}</text>
+        </view>
+      </view>
+      <view class="cu-item">
+        <view class="content">
+          <text class="cuIcon-locationfill text-cyan"></text>
+          <text class="text-grey">位置</text>
+        </view>
+        <view class="action">
+          <text class="text-grey text-sm">{{item.address}}</text>
+        </view>
+      </view>
+      <view class="cu-item">
+        <view class="content">
+          <text class="cuIcon-tagfill text-red"></text>
+          <text class="text-grey">故障类型</text>
+        </view>
+        <view class="action">
+          <view class="cu-tag round bg-orange light">车链</view>
+        </view>
+      </view>
+      <view class="cu-item">
+        <view class="content padding-tb-sm">
+          <view class="text-grey">
+            <text class="cuIcon-clothesfill text-blue margin-right-xs"></text>故障描述</view>
+          <view class="text-gray text-sm">
+            <text class="cuIcon-infofill margin-right-xs"></text>{{item.desc}}</view>
+        </view>
+      </view>
+      <view class="cu-item arrow">
+        <view class="content">
+          <text class="cuIcon-picfill text-pink"></text>
+          <text class="text-grey">查看图片</text>
+        </view>
+        <view class="action">
+          <text class="text-grey text-sm"></text>
+        </view>
+      </view>
+      <view class="cu-item">
+        <view class="content">
+          <text class="cuIcon-newshotfill text-yellow"></text>
+          <text class="text-grey">解决状态</text>
+        </view>
+        <view class="action">
+          <switch data-id="{{item.id}}" class="switch-solve sm" bindchange="switchStatu" checked="{{item.status=='0'}}"></switch>
+        </view>
+      </view>
 
-  <view class="cu-list menu card-menu margin-top">
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-circlefill text-grey"></text>
-        <text class="text-grey">单车ID</text>
-      </view>
-      <view class="action">
-        <text class="text-grey text-sm">123456</text>
-      </view>
     </view>
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-circlefill text-grey"></text>
-        <text class="text-grey">位置</text>
-      </view>
-      <view class="action">
-        <text class="text-grey text-sm">北京理工大学珠海学院第三饭堂</text>
-      </view>
-    </view>
-    <view class="cu-item {{menuArrow?'arrow':''}}">
-      <view class="content">
-        <text class="cuIcon-tagfill text-red"></text>
-        <text class="text-grey">故障类型</text>
-      </view>
-      <view class="action">
-        <view class="cu-tag round bg-orange light">车链</view>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content padding-tb-sm">
-        <view class="text-grey">
-          <text class="cuIcon-clothesfill text-blue margin-right-xs"></text>故障描述</view>
-        <view class="text-gray text-sm">
-          <text class="cuIcon-infofill margin-right-xs"></text>车链子断了，接不上去</view>
-      </view>
-      
-    </view>
+
   </view>
 
-  <view class="cu-list menu card-menu margin-top">
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-circlefill text-grey"></text>
-        <text class="text-grey">图标 + 标题</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-circlefill text-grey"></text>
-        <text class="text-grey">图标 + 标题</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-circlefill text-grey"></text>
-        <text class="text-grey">图标 + 标题</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-circlefill text-grey"></text>
-        <text class="text-grey">图标 + 标题</text>
-      </view>
-    </view>
-  </view>
 
-  <view class="cu-list menu card-menu margin-top">
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-circlefill text-grey"></text>
-        <text class="text-grey">图标 + 标题</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-circlefill text-grey"></text>
-        <text class="text-grey">图标 + 标题</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-circlefill text-grey"></text>
-        <text class="text-grey">图标 + 标题</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-circlefill text-grey"></text>
-        <text class="text-grey">图标 + 标题</text>
-      </view>
-    </view>
-  </view>
-
-  <view class="cu-list menu card-menu margin-top">
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-circlefill text-grey"></text>
-        <text class="text-grey">图标 + 标题</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-circlefill text-grey"></text>
-        <text class="text-grey">图标 + 标题</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-circlefill text-grey"></text>
-        <text class="text-grey">图标 + 标题</text>
-      </view>
-    </view>
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-circlefill text-grey"></text>
-        <text class="text-grey">图标 + 标题</text>
-      </view>
-    </view>
-  </view>
 
 </scroll-view>

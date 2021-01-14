@@ -50,6 +50,8 @@ Page({
         success: (res) => {},
       })
 
+      
+
       if(res.status === "success"){
         this.setData({
           login:true
@@ -68,6 +70,11 @@ Page({
         })
       }
 
+    })
+
+    // 记得 delete
+    wx.reLaunch({
+      url: '/pages/admin/admin',
     })
 
     

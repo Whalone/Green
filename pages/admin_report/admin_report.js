@@ -1,3 +1,5 @@
+const util = require("../../utils/util")
+
 // pages/admin_report/admin_report.js
 Page({
 
@@ -5,8 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    notSolve:'',
-    isSolve:'',
+    notSolve:true,
+    isSolve:false,
+    reportList:[],
   },
 
   showModal(e) {
@@ -35,11 +38,25 @@ Page({
     console.log(this.data.notSolve)
   },
 
+  // 请求所有report数据
+  getReportList:function(){
+    util.request('/reports','','GET',(res)=>{
+      this.setData({
+        reportList:res.data
+      })
+    })
+  },
+
+  // 切换状态
+  switchStatu:function(e){
+    console.log(e);
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getReportList();
   },
 
   /**

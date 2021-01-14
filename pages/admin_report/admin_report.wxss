@@ -48,3 +48,11 @@
   width: 2em;
   text-align: center;
 }
+
+switch-solve::after{
+  content: "\e646";
+}
+
+switch-solve::before{
+  content: "\e645";
+}
