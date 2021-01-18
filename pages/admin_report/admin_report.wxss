@@ -42,17 +42,22 @@
   text-align: center;
 }
 
-.cuIcon-infofill{
+.cuIcon-infofill {
   display: inline-block;
   margin-right: 10rpx;
   width: 2em;
   text-align: center;
 }
 
-switch-solve::after{
+switch-solve::after {
   content: "\e646";
 }
 
-switch-solve::before{
+switch-solve::before {
   content: "\e645";
+}
+
+/* 默认的高度有点高 调低一点 */
+.cu-list.menu .cu-item {
+  min-height: 90rpx
 }

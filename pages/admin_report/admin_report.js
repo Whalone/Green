@@ -47,8 +47,32 @@ Page({
     })
   },
 
+  updateStatu:function(){
+
+    var data = {};
+    data.id = id;
+    data.statu = statu === true?1:0
+    console.log(data);
+    // util.request()
+  },
+
   // 切换状态
   switchStatu:function(e){
+    var that = this;
+    wx.showModal({
+      title: '提示',
+      content: '是否确定解决该问题？',
+      success (res) {
+        if (res.confirm) {
+          console.log('用户点击确定');
+
+          that.updateStatu();
+
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
     console.log(e);
   },
 
