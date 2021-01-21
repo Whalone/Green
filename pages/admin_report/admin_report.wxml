@@ -86,8 +86,8 @@
           <text class="cuIcon-newshotfill text-yellow"></text>
           <text class="text-grey">解决状态</text>
         </view>
-        <view class="action">
-          <switch data-id="{{item.id}}" class="switch-solve sm" bindchange="switchStatu" checked="{{item.status=='0'}}"></switch>
+        <view class="action" >
+          <switch data-idx="{{idx}}" data-id="{{item.id}}" data-item="{{item}}" class="switch-solve sm" bindchange="switchStatu" checked="{{item.status=='1'}}"></switch>
         </view>
       </view>
 
