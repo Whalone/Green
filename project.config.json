@@ -77,6 +77,12 @@
           "pathName": "pages/person/person",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/bikeChart",
+          "pathName": "pages/bikeChart/bikeChart",
+          "query": "",
+          "scene": null
         }
       ]
     }
