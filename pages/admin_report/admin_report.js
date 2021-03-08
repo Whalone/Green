@@ -41,6 +41,8 @@ Page({
   // 请求所有report数据
   getReportList: function () {
     util.request('/reports', '', 'GET', (res) => {
+      console.log('test')
+      console.log(res)
       this.setData({
         reportList: res.data
       })
@@ -57,10 +59,10 @@ Page({
       util.request(url, data, 'PUT', (res) => {
         console.log(res)
         if (res.status === "success") {
-          console.log("jin ru resolve")
+          console.log("jin ru resolve1")
           resolve(true);
         } else {
-          console.log("jin ru resolve")
+          console.log("jin ru resolve2")
           resolve(false);
         }
       })

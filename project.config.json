@@ -32,9 +32,9 @@
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
-    "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
+    "userConfirmedBundleSwitch": false,
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
@@ -49,6 +49,14 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
     "plugin": {
       "list": []
     },
@@ -61,27 +69,9 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/record/record",
-          "pathName": "pages/record/record",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/report/report",
-          "pathName": "pages/report/report",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/person/person",
-          "pathName": "pages/person/person",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/bikeChart",
+          "id": -1,
+          "name": "pages/bikeChart/bikeChart",
           "pathName": "pages/bikeChart/bikeChart",
-          "query": "",
           "scene": null
         }
       ]
