@@ -6,7 +6,7 @@
 </view>
 <!-- 菜单列表的分菜单 -->
 <view class="cu-list menu sm-border">
-  <view class="cu-item arrow">
+  <view class="cu-item arrow" bindtap="jumpBikeChart">
     <view class="content">
       <text class="cuIcon-share text-blue"></text>
       <text class="text-grey">单车借用情况</text>
@@ -21,7 +21,7 @@
       <view class="cu-tag round bg-red sm">5</view>
     </view>
   </view>
-  <view class="cu-item arrow">
+  <view class="cu-item arrow" bindtap="jumpAdminReturn">
     <view class="content">
       <text class="cuIcon-warnfill text-yellow"></text>
       <text class="text-grey">学生异常归还</text>

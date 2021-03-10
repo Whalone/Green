@@ -54,7 +54,7 @@
   </view>
 
   <view class="cu-list grid col-2 no-border">
-    <view class="cu-item">
+    <view class="cu-item" bindtap="jumpBikeChart">
       <view class="cuIcon-explorefill text-blue icon" style="font-size:60rpx;">
         <text>借用情况</text>
       </view>

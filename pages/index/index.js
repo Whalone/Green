@@ -10,6 +10,12 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
+  jumpBikeChart:function(){
+    wx.navigateTo({
+      url: '/pages/bikeChart/bikeChart',
+    })
+  },
+
   callAdmin:function(){
     wx.makePhoneCall({
       phoneNumber: '18807669295' //仅为示例，并非真实的电话号码

@@ -11,6 +11,7 @@
     "pages/suggest/suggest",
     "pages/admin/admin",
     "pages/admin_report/admin_report",
+    "pages/admin_return/admin_return",
     "pages/bikeChart/bikeChart",
     "pages/login/login"
   ],

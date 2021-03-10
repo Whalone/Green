@@ -7,10 +7,21 @@ Page({
   data: {
 
   },
+  jumpBikeChart:function(){
+    wx.navigateTo({
+      url: '/pages/bikeChart/bikeChart',
+    })
+  },
 
   jumpReport:function(){
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/admin_report/admin_report',
+    })
+  },
+
+  jumpAdminReturn:function(){
+    wx.navigateTo({
+      url: '/pages/admin_return/admin_return',
     })
   },
 

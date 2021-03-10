@@ -1,0 +1,63 @@
+/* pages/admin_return/admin_return.wxss */
+
+.page {
+  height: 100Vh;
+  width: 100vw;
+}
+
+.page.show {
+  overflow: hidden;
+}
+
+.switch-sex::after {
+  content: "\e716";
+}
+
+.switch-sex::before {
+  content: "\e7a9";
+}
+
+.switch-music::after {
+  content: "\e66a";
+}
+
+.switch-music::before {
+  content: "\e6db";
+}
+
+.cu-btn {
+  width: auto !important;
+  border-radius: 10rpx;
+}
+
+/* 去掉卡片的下划线 */
+.cu-list.menu>.cu-item:after {
+  border-bottom: none !important;
+}
+
+.cuIcon-clothesfill {
+  display: inline-block;
+  margin-right: 10rpx;
+  width: 1.6em;
+  text-align: center;
+}
+
+.cuIcon-infofill {
+  display: inline-block;
+  margin-right: 10rpx;
+  width: 2em;
+  text-align: center;
+}
+
+switch-solve::after {
+  content: "\e646";
+}
+
+switch-solve::before {
+  content: "\e645";
+}
+
+/* 默认的高度有点高 调低一点 */
+.cu-list.menu .cu-item {
+  min-height: 90rpx
+}
