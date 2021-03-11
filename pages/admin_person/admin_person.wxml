@@ -1,0 +1,57 @@
+<!--pages/admin_person/admin_person.wxml-->
+<form>
+  <!-- <view class="cu-form-group">
+    <view class="title">头像</view>
+    <view class="cu-avatar radius">
+      <open-data type='userAvatarUrl'></open-data>
+    </view>
+  </view> -->
+
+
+  <!-- <view class="cu-form-group">
+    <view class="title">昵称</view>
+    <open-data type='userNickName'></open-data>
+  </view> -->
+
+  <view class="cu-form-group">
+    <view class="title">ID</view>
+    <view>{{adminInfo.id}}</view>
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">姓名</view>
+    <view>{{adminInfo.name}}</view>
+    <!-- <view class="cuIcon-female lg text-pink"></view> -->
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">性别</view>
+    <view class="{{adminInfo.sex=='male'?'cuIcon-male':'cuIcon-female'}} lg text-blue"></view>
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">手机</view>
+    <view>{{adminInfo.phone}}</view>
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">创建日期</view>
+    <view>{{adminInfo.create_date}}</view>
+  </view>
+
+  <!-- <view class="cu-form-group">
+    <view class="title">学院</view>
+    <view>{{person.college}}</view>
+  </view>
+
+  <view class="cu-form-group margin-top">
+    <view class="title">剩余金额</view>
+    <view>{{person.amount}}</view>
+  </view>
+
+  <view class="cu-form-group" bindtap="jumpRecord">
+    <view class="title">使用记录</view>
+    <view class="cuIcon-right lg"></view>
+  </view> -->
+
+</form>

@@ -70,5 +70,6 @@ App({
     openId:'',
     unionId:'',
     admin_login:false,
+    adminInfo:{},
   }
 })

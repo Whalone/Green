@@ -25,6 +25,12 @@ Page({
     })
   },
 
+  jumpAdminPerson:function(){
+    wx.navigateTo({
+      url: '/pages/admin_person/admin_person',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

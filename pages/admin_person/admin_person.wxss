@@ -1,0 +1,10 @@
+/* pages/admin_person/admin_person.wxss */
+
+.cuIcon-male{
+  font-size: 40rpx !important;
+}
+
+.cuIcon-female{
+  font-size: 40rpx !important;
+  color: #e03997 !important;
+}

@@ -16,6 +16,10 @@ Page({
     var userName = this.data.userName;
     var password = this.data.password;
 
+    // wx.showToast({
+    //   title: '111222',
+    // })
+
     var data = {
       userName:userName,
       password:password
@@ -28,6 +32,7 @@ Page({
         icon: 'none',
         duration: 2000
       })
+      return;
     }
 
     if(password === ''){
@@ -36,6 +41,7 @@ Page({
         icon: 'none',
         duration: 2000
       })
+      return;
     }
 
     wx.showLoading({
@@ -45,21 +51,19 @@ Page({
     console.log(data)
 
     util.request('/admin/login',data,'POST',(res)=>{
-      
-      wx.hideLoading({
-        success: (res) => {},
-      })
 
-      
+      wx.hideLoading()
 
       if(res.status === "success"){
         this.setData({
           login:true
         })
 
+        var adminInfo = res.data
         app.globalData.admin_login = true;
-
-        console.log(app.globalData.admin_login)
+        app.globalData.adminInfo = adminInfo
+        // console.log(app.globalData.admin_login)
+        // console.log(app.globalData.adminInfo)
 
         wx.reLaunch({
           url: '/pages/admin/admin',
@@ -72,10 +76,10 @@ Page({
 
     })
 
-    // 记得 delete
-    wx.reLaunch({
-      url: '/pages/admin/admin',
-    })
+    // // 记得 delete
+    // wx.reLaunch({
+    //   url: '/pages/admin/admin',
+    // })
 
     
   },

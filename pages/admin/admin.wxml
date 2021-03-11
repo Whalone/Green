@@ -36,7 +36,7 @@
 </view>
 <!-- 更多功能列表的分菜单 -->
 <view class="cu-list menu sm-border">
-  <view class="cu-item arrow">
+  <view class="cu-item arrow" bindtap="jumpAdminPerson">
     <view class="content">
       <text class="cuIcon-friendadd text-red"></text>
       <text class="text-grey">管理员个人信息</text>
