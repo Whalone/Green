@@ -1,0 +1,49 @@
+<!--pages/admin_student/admin_student.wxml-->
+
+<form>
+  <view class="cu-form-group">
+		<view class="title">学生ID</view>
+		<input placeholder="请输入ID或姓名" bindinput="idInput"></input>
+		<button class="cu-btn bg-green shadow search_button" bindtap="idSearch">搜索</button>
+	</view>
+</form>
+
+<form wx:if="{{status}}">
+  <view class="cu-form-group margin-top">
+    <view class="title">ID</view>
+    <view>{{student.id}}</view>
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">姓名</view>
+    <view>{{student.name}}</view>
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">性别</view>
+    <view class="{{student.sex=='male'?'cuIcon-male':'cuIcon-female'}} lg text-blue"></view>
+    <!-- <view class="cuIcon-female lg text-pink"></view> -->
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">手机</view>
+    <view>{{student.phone}}</view>
+    <!-- <view class="cuIcon-female lg text-pink"></view> -->
+  </view>
+
+  <view class="cu-form-group">
+    <view class="title">学院</view>
+    <view>{{student.college}}</view>
+  </view>
+
+  <view class="cu-form-group margin-top">
+    <view class="title">剩余金额</view>
+    <view>{{student.amount}}</view>
+  </view>
+
+  <view class="cu-form-group" bindtap="jumpRecord">
+    <view class="title">使用记录</view>
+    <view class="cuIcon-right lg"></view>
+  </view>
+
+</form>

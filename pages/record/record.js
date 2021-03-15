@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    id:'',
     records:[],
   },
 
@@ -15,7 +16,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // console.log(options.id)
+    this.setData({
+      id:options.id
+    })
   },
 
   /**
@@ -29,18 +33,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var openId = app.globalData.openId
-    var url = "/records/"+openId
+    var id = this.data.id
+    if(id == '' || id == undefined){
+      id = app.globalData.openId
+    }
+
+    var url = "/records/"+id
 
     util.request(url,'','GET',(res)=>{
       this.setData({
         records:res.data
       })
-
-      
-
     });
-    
   },
 
   /**

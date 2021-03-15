@@ -79,6 +79,13 @@
           "id": -1,
           "name": "pages/admin_return/admin_return",
           "pathName": "pages/admin_return/admin_return",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/admin_student/admin_student",
+          "pathName": "pages/admin_student/admin_student",
           "scene": null
         }
       ]

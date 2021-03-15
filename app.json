@@ -13,6 +13,7 @@
     "pages/admin_report/admin_report",
     "pages/admin_return/admin_return",
     "pages/admin_person/admin_person",
+    "pages/admin_student/admin_student",
     "pages/bikeChart/bikeChart",
     "pages/login/login"
   ],

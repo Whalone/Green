@@ -42,7 +42,7 @@
       <text class="text-grey">管理员个人信息</text>
     </view>
   </view>
-  <view class="cu-item arrow">
+  <view class="cu-item arrow" bindtap="jumpAdminStudent">
     <view class="content">
       <text class="cuIcon-friend text-orange"></text>
       <text class="text-grey">学生个人信息</text>
