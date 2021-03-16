@@ -1,0 +1,8 @@
+<!--pages/admin_records/admin_records.wxml-->
+<form>
+  <view class="cu-form-group">
+		<view class="title">学生ID</view>
+		<input placeholder="请输入ID或姓名" bindinput="idInput"></input>
+		<button class="cu-btn bg-green shadow search_button" bindtap="idSearch">搜索</button>
+	</view>
+</form>

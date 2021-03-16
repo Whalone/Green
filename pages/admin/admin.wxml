@@ -48,7 +48,7 @@
       <text class="text-grey">学生个人信息</text>
     </view>
   </view>
-  <view class="cu-item arrow">
+  <view class="cu-item arrow" bindtap="jumpAdminRecords">
     <view class="content">
       <text class="cuIcon-friendfavor text-green"></text>
       <text class="text-grey">学生借用情况</text>

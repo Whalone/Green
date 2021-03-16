@@ -37,6 +37,12 @@ Page({
     })
   },
 
+  jumpAdminRecords:function(){
+    wx.navigateTo({
+      url: '/pages/admin_records/admin_records',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
