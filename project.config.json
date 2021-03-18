@@ -86,6 +86,14 @@
           "id": -1,
           "name": "pages/admin_student/admin_student",
           "pathName": "pages/admin_student/admin_student",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "pages/admin_feedBack/admin_feedBack",
+          "pathName": "pages/admin_feedBack/admin_feedBack",
+          "query": "",
           "scene": null
         }
       ]

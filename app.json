@@ -15,6 +15,7 @@
     "pages/admin_person/admin_person",
     "pages/admin_student/admin_student",
     "pages/admin_records/admin_records",
+    "pages/admin_feedBack/admin_feedBack",
     "pages/bikeChart/bikeChart",
     "pages/login/login"
   ],
