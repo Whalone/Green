@@ -1,4 +1,5 @@
 // pages/exception/exception.js
+const util = require("../../utils/util");
 Page({
 
   /**
@@ -8,6 +9,7 @@ Page({
     id:"",
     address:"",
     imgList: [],
+    errorInfo:'',
     
   },
   getLocation() {
@@ -64,7 +66,31 @@ Page({
   // 双向绑定获取textArea的值
   textareaInput(e){
     this.setData({
-      suggestion:e.detail.value
+      errorInfo:e.detail.value
+    })
+  },
+
+  idInput(e){
+    this.setData({
+      id:e.detail.value
+    })
+  },
+
+  submit(){
+    var data = {};
+    data.bikeId = this.data.id;
+    data.address = this.data.address;
+    data.errorInfo = this.data.errorInfo
+    data.imgList = this.data.imgList;
+    console.log(data)
+
+    util.request('/exception',data,'POST',(res)=>{
+      console.log(res)
+      if(res.status === 'success'){
+        wx.showToast({
+          title: '提交成功',
+        })
+      }
     })
   },
 

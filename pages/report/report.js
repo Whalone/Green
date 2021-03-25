@@ -1,3 +1,5 @@
+const util = require("../../utils/util");
+
 // pages/report/report.js
 Page({
 
@@ -7,6 +9,23 @@ Page({
   data: {
     imgList: [],
     picker: ['车把', '车轮', '座椅','车链','脚踏板','刹车','其他'],
+    imageUrl:'',
+    address:'',
+    bikeId:'',
+    type:'',
+    errorInfo:'',
+  },
+
+  inputBikeId:function(e){
+    this.setData({
+      bikeId:e.detail.value
+    })
+  },
+
+  textareaInput:function(e){
+    this.setData({
+      errorInfo:e.detail.value
+    })
   },
 
   getLocation() {
@@ -23,7 +42,8 @@ Page({
   PickerChange(e) {
     console.log(e);
     this.setData({
-      index: e.detail.value
+      index: e.detail.value,
+      type:this.data.picker[e.detail.value],
     })
   },
 
@@ -64,6 +84,27 @@ Page({
             imgList: this.data.imgList
           })
         }
+      }
+    })
+  },
+  
+  submit:function(){
+    // var data = {};
+    // data.
+    // util.request('/api/reports',)
+    var data = {};
+    data.bikeId = this.data.bikeId;
+    data.address = this.data.address;
+    data.type = this.data.type;
+    data.errorInfo = this.data.errorInfo
+    data.imgList = this.data.imgList;
+
+    util.request('/report',data,'POST',(res)=>{
+      console.log(res)
+      if(res.status === 'success'){
+        wx.showToast({
+          title: '提交成功',
+        })
       }
     })
   },

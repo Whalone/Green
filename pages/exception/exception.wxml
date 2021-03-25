@@ -38,5 +38,5 @@
 </form>
 
 <view class="padding flex flex-direction">
-  <button class="cu-btn bg-blue lg button-hover" style="margin-left:0;margin-right:0;width:100%;">提交</button>
+  <button class="cu-btn bg-blue lg button-hover" style="margin-left:0;margin-right:0;width:100%;" bindtap="submit">提交</button>
 </view>
