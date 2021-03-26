@@ -62,7 +62,8 @@ Component({
       var url = '/bike/'+bikeId;
 
       var data = {
-        mode:mode
+        mode:mode,
+        address:'第一饭堂',
       }
 
       util.request(url,data,'PUT',(res)=>{
