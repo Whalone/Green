@@ -26,6 +26,7 @@ App({
           },
           success(res) {
             var res = res.data;
+            console.log(res)
             that.globalData.openId = res.data.openId
             that.globalData.unionId = res.data.unionId
             console.log(that.globalData.openId)

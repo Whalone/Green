@@ -1,4 +1,5 @@
-var server_url = "http://mock-api.com/Zn5PxXgj.mock";
+// var server_url = "http://mock-api.com/Zn5PxXgj.mock";
+var server_url = "http://localhost:8000/";
 var app_id = "wx205209dddadfb39b";
 
 /**

@@ -1,5 +1,6 @@
 // pages/exception/exception.js
 const util = require("../../utils/util");
+var app = getApp()
 Page({
 
   /**
@@ -82,6 +83,7 @@ Page({
     data.address = this.data.address;
     data.errorInfo = this.data.errorInfo
     data.imgList = this.data.imgList;
+    data.openId = app.globalData.openId;
     console.log(data)
 
     util.request('/exception',data,'POST',(res)=>{

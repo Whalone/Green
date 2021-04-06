@@ -98,6 +98,9 @@ Page({
     data.type = this.data.type;
     data.errorInfo = this.data.errorInfo
     data.imgList = this.data.imgList;
+    data.openId = app.data.openId;
+
+    console.log(data)
 
     util.request('/report',data,'POST',(res)=>{
       console.log(res)

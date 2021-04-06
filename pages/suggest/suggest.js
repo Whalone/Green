@@ -14,9 +14,14 @@ Page({
     this.setData({
       isLoading:true
     })
-    var data = {
-      suggestion:this.data.suggestion
-    }
+    var data = {};
+    data.suggestion = this.data.suggestion;
+    data.openId = app.globalData.openId;
+    // var data = {
+    //   suggestion:this.data.suggestion,
+    //   openId:app.data.openId
+    // }
+    console.log(data);
 
     util.request('/suggestion',data,'POST',(res)=>{
       this.setData({
