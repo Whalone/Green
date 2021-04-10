@@ -32,7 +32,7 @@
 
   <view class="cu-form-group margin-top">
     <view class="title">剩余金额</view>
-    <view>{{person.amount}}</view>
+    <view>{{person.amout}}</view>
   </view>
 
   <view class="cu-form-group" bindtap="jumpRecord">
