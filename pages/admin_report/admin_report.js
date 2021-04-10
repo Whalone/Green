@@ -8,7 +8,7 @@ Page({
    */
   data: {
     notSolve: true,
-    isSolve: false,
+    isSolve: true,
     reportList: [],
   },
 
@@ -54,7 +54,7 @@ Page({
     data.id = id;
     data.statu = statu === true ? 1 : 0
     console.log(data);
-    var url = '/api/reports/' + id;
+    var url = 'reports/' + id;
     return new Promise((resolve, reject) => {
       util.request(url, data, 'PUT', (res) => {
         console.log(res)

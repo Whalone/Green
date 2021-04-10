@@ -43,7 +43,7 @@
           <text class="text-grey">单车ID</text>
         </view>
         <view class="action">
-          <text class="text-grey text-sm">{{item.car_id}}</text>
+          <text class="text-grey text-sm">{{item.bikeId}}</text>
         </view>
       </view>
       <view class="cu-item">
@@ -61,7 +61,7 @@
           <text class="text-grey">故障类型</text>
         </view>
         <view class="action">
-          <view class="cu-tag round bg-orange light">车链</view>
+          <view class="cu-tag round bg-orange light">{{item.type}}</view>
         </view>
       </view>
       <view class="cu-item">
@@ -69,7 +69,7 @@
           <view class="text-grey">
             <text class="cuIcon-clothesfill text-blue margin-right-xs"></text>故障描述</view>
           <view class="text-gray text-sm">
-            <text class="cuIcon-infofill margin-right-xs"></text>{{item.desc}}</view>
+            <text class="cuIcon-infofill margin-right-xs"></text>{{item.errorInfo}}</view>
         </view>
       </view>
       <view class="cu-item arrow">

@@ -16,7 +16,7 @@
 
   <view class="cu-form-group">
     <view class="title">姓名</view>
-    <view>{{student.name}}</view>
+    <view>{{student.username}}</view>
   </view>
 
   <view class="cu-form-group">
