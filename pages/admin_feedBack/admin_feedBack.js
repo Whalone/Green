@@ -14,7 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.onShow();
   },
 
   /**
@@ -28,7 +28,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    util.request("/api/suggestion","","GET",(res)=>{
+    util.request("suggestion","","GET",(res)=>{
       this.setData({
         feedBack_list:res.data
       })
