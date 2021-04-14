@@ -1,4 +1,5 @@
 const util = require("../../utils/util");
+var app = getApp();
 
 // pages/report/report.js
 Page({
@@ -98,7 +99,7 @@ Page({
     data.type = this.data.type;
     data.errorInfo = this.data.errorInfo
     data.imgList = this.data.imgList;
-    data.openId = app.data.openId;
+    data.openId = app.globalData.openId;
 
     console.log(data)
 

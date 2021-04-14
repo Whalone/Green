@@ -17,9 +17,9 @@
       <text class="cuIcon-friendfill text-olive"></text>
       <text class="text-grey">学生故障报修</text>
     </view>
-    <view class="action">
+    <!-- <view class="action">
       <view class="cu-tag round bg-red sm">5</view>
-    </view>
+    </view> -->
   </view>
   <view class="cu-item arrow" bindtap="jumpAdminReturn">
     <view class="content">

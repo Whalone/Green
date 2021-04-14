@@ -14,10 +14,9 @@ Page({
   },
 
   idSearch: function () {
-    var url = '/user/' + this.data.stu_id
-    console.log(url)
+    var url = 'user/';
 
-    util.request(url, '', 'GET', (res) => {
+    util.request(url, {userId: this.data.stu_id}, 'POST', (res) => {
       if (res.status === 'success') {
         this.setData({
           student: res.data

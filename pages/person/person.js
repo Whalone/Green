@@ -23,14 +23,14 @@ Page({
    */
   onLoad: function (options) {
     var openId = app.globalData.openId;
-    var url = "/user/"+openId;
+    var url = "user/";
     console.log(url)
 
     wx.showLoading({
       title: '加载中',
     })
 
-    util.request(url,'','GET',(res)=>{
+    util.request(url,{userId: openId},'POST',(res)=>{
       this.setData({
         person:res.data
       })

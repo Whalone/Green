@@ -15,11 +15,6 @@ Page({
   adminLogin: function () {
     var userName = this.data.userName;
     var password = this.data.password;
-
-    // wx.showToast({
-    //   title: '111222',
-    // })
-
     var data = {
       userName:userName,
       password:password
@@ -54,7 +49,7 @@ Page({
 
       wx.hideLoading()
 
-      if(res.status === "success"){
+      if(res.data.status == "success"){
         this.setData({
           login:true
         })
@@ -62,26 +57,19 @@ Page({
         var adminInfo = res.data
         app.globalData.admin_login = true;
         app.globalData.adminInfo = adminInfo
-        // console.log(app.globalData.admin_login)
-        // console.log(app.globalData.adminInfo)
 
         wx.reLaunch({
           url: '/pages/admin/admin',
         })
-      }else{
+      } else {
         wx.showToast({
-          title: res.message,
+          title: '登陆失败',
+          icon: 'none',
         })
       }
 
     })
 
-    // // 记得 delete
-    // wx.reLaunch({
-    //   url: '/pages/admin/admin',
-    // })
-
-    
   },
 
   // 捕获userName的值

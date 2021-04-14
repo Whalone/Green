@@ -33,14 +33,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var id = this.data.id
-    if(id == '' || id == undefined){
-      id = app.globalData.openId
-    }
+    var url = "records/";
 
-    var url = "/records/"+id
-
-    util.request(url,'','GET',(res)=>{
+    util.request(url, {userId: app.globalData.openId},'POST',(res)=>{
       this.setData({
         records:res.data
       })

@@ -8,7 +8,7 @@ Page({
    */
   data: {
     notSolve: true,
-    isSolve: false,
+    isSolve: true,
     returnList: [],
   },
 
@@ -40,7 +40,7 @@ Page({
 
   // 请求所有report数据
   getReportList: function () {
-    util.request('/api/returns', '', 'GET', (res) => {
+    util.request('returns', '', 'GET', (res) => {
       console.log('test')
       console.log(res)
       this.setData({
@@ -54,7 +54,7 @@ Page({
     data.id = id;
     data.statu = statu === true ? 1 : 0
     console.log(data);
-    var url = '/api/returns/' + id;
+    var url = 'returns/' + id;
     return new Promise((resolve, reject) => {
       util.request(url, data, 'PUT', (res) => {
         console.log(res)

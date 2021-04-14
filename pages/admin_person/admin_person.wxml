@@ -20,7 +20,7 @@
 
   <view class="cu-form-group">
     <view class="title">姓名</view>
-    <view>{{adminInfo.name}}</view>
+    <view>{{adminInfo.username}}</view>
     <!-- <view class="cuIcon-female lg text-pink"></view> -->
   </view>
 

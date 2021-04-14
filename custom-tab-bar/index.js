@@ -1,4 +1,5 @@
 const util = require("../utils/util");
+const app = getApp();
 
 // custom-tab-bar/index.js
 Component({
@@ -47,50 +48,52 @@ Component({
       var that = this;
       wx.scanCode({
         success (res) {
+          // console.log(res);
           that.setData({
             bikeId:res.result
           })
-
-          that.updateBikeStatus("open")
+          that.updateBikeStatus()
         }
       })
 
     },
 
-    updateBikeStatus(mode){
+    updateBikeStatus(){
       var bikeId  = this.data.bikeId;
-      var url = '/bike/'+bikeId;
+      var url = 'bike/'+bikeId;
 
-      var data = {
-        mode:mode,
-        address:'第一饭堂',
-      }
-
-      util.request(url,data,'PUT',(res)=>{
-
-        wx.showLoading({
-          title: '开锁中',
-        })
-
-        if(res.status = 'success'){
-
-          wx.hideLoading({
-            success: (res) => {
-              wx.showToast({
-                title: '开锁成功',
+      wx.chooseLocation({
+        success: (res)=>{
+          util.request(url, {address:res.name, openId: app.globalData.openId}, 'PUT', (res)=>{
+            console.log(res);
+            wx.showLoading({
+              title: '开锁中',
+            })
+    
+            if(res.data.status == "open-success"){
+              wx.hideLoading({
+                success: (res) => {
+                  wx.showToast({
+                    title: '开锁成功',
+                  })
+                },
               })
-            },
-          })
-
-        }else{
-          wx.showToast({
-            title: '出现异常，请联系管理员',
+            } else if (res.data.status == "close-success") {
+              wx.hideLoading({
+                success: (res) => {
+                  wx.showToast({
+                    title: '关锁成功',
+                  })
+                },
+              })
+            } else {
+              wx.showToast({
+                title: '出现异常',
+              })
+            }
           })
         }
       })
     }
-
-
-
   }
 })

@@ -1,6 +1,6 @@
 // pages/exception/exception.js
 const util = require("../../utils/util");
-var app = getApp()
+var app = getApp();
 Page({
 
   /**

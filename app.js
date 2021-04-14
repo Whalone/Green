@@ -52,6 +52,25 @@ App({
             }
           })
         }
+        // if (!res.authSetting['scope.userLocation']) {
+        //   wx.authorize({
+        //     scope: 'scope.userLocation',
+        //     success () {
+        //       wx.getLocation({
+        //         success: res => {
+        //           console.log(res);
+        //           wx.openLocation({
+        //             type: 'gcj02',
+        //             latitude: res.latitude,
+        //             longitude: res.longitude,
+        //             name: '1',
+        //             scale: 28
+        //           })              
+        //         }
+        //       })
+        //     }
+        //   })
+        // }
       }
     })
 
