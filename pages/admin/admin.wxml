@@ -54,7 +54,7 @@
       <text class="text-grey">学生借用情况</text>
     </view>
   </view>
-  <view class="cu-item arrow">
+  <view class="cu-item arrow" bindtap="jumpAdminFeedBack">
     <view class="content">
       <text class="cuIcon-searchlist text-yellow"></text>
       <text class="text-grey">意见反馈查看</text>
@@ -69,7 +69,7 @@
 </view>
 <!-- 操作的分菜单 -->
 <view class="cu-list menu sm-border">
-  <view class="cu-item arrow">
+  <view class="cu-item arrow" bindtap="quit">
     <view class="content">
       <text class="cuIcon-roundclosefill text-red"></text>
       <text class="text-grey">退出</text>

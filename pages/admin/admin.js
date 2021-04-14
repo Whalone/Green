@@ -1,4 +1,6 @@
 // pages/admin/admin.js
+var util = require('../../utils/util')
+var app = getApp()
 Page({
 
   /**
@@ -40,6 +42,19 @@ Page({
   jumpAdminRecords:function(){
     wx.navigateTo({
       url: '/pages/admin_records/admin_records',
+    })
+  },
+
+  jumpAdminFeedBack:function(){
+    wx.navigateTo({
+      url: '/pages/admin_feedBack/admin_feedBack',
+    })
+  },
+
+  quit:function(){
+    app.globalData.admin_login = false;
+    wx.redirectTo({
+      url: '/pages/auth/auth',
     })
   },
 

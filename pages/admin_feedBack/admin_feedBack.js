@@ -1,4 +1,6 @@
 // pages/admin_feedBack/admin_feedBack.js
+var util = require('../../utils/util')
+var app = getApp()
 Page({
 
   /**
@@ -26,7 +28,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    util.request("/api/suggestion","","GET",(res)=>{
+      this.setData({
+        feedBack_list:res.data
+      })
+    })
 
+    // var res = {"data":[{"detail":"圣诞节傲娇拉拉裤数据的卡拉胶临时冻结，大声疾呼大家看","date":"2020-02-01"},{"detail":"沙口路几点啦，毒经啊空间立刻，京东卡三六九等","date":"2020-04-01"}]}
+    // this.setData({
+    //   feedBack_list:res.data
+    // })
   },
 
   /**
